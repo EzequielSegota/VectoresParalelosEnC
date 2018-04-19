@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #define TAMANIO 5
 
+/* Objetivo principal:
+    Ordenamiento de vectores paralelos, sin importar si los datos son hardcodeados
+    1.Hacer el alta.
+    2.Hacer la baja(poner todo en cero)
+    3.Modificar(todos menos el legajo)
+*/
+float sacarPromedio(int,int);//recordar castear
 void mostrarAlumnos (char [][50],int [],int [],float [],int [],int []);
 void cargarAlumnos (char [][50],int [],int [],float [],int [],int []);
 int buscarLugar (int [], int []);
@@ -33,22 +40,22 @@ void mostrarAlumnos (char nombre[][50],int primeraNota[],int segundaNota[],float
 void cargarAlumnos (char nombre[][50],int primeraNota[],int segundaNota[],float promedio[],int legajo[],int largo[])
 {
     int indice;
-    indice=buscarLugar(legajo largo);
+    indice=buscarLugar(legajo, largo);
 
 
-    legajo[1]=666;
+    legajo[indice]=666;
 }
 
-int buscarLugar (int legajo[], int [])
+int buscarLugar (int legajo[], int largo[])
 {
     int i;
     int indiceRetornado=-1;
 
-    for(i=0;i<TAMANIO;i++)
+    for(i=0;i<largo;i++)
     {
         if(legajo[i]==0)
         {
-            indiceRetornado=i
+            indiceRetornado=i;
             break;
         }
     }
