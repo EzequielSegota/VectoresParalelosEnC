@@ -4,6 +4,7 @@
 
 /* Objetivo principal:
     Ordenamiento de vectores paralelos, sin importar si los datos son hardcodeados
+    Ordenar con burbujeo
     1.Hacer el alta.
     2.Hacer la baja(poner todo en cero)
     3.Modificar(todos menos el legajo)
@@ -16,10 +17,10 @@ int buscarLugar (int [], int []);
 int main()
 {
     char nombre[TAMANIO][50]={"Juan","Maria","Alfredo","Jose","Lili"};
-    int notasUno[TAMANIO]={0};
-    int notasDos[TAMANIO]={0};
-    float promedios[TAMANIO]={0};
-    int legajo[TAMANIO]={0};
+    int notasUno[TAMANIO]={4,10,2,7,2};
+    int notasDos[TAMANIO]={4,8,7,8,3};
+    float promedios[TAMANIO]={4,9.5,4.5,8.5,2.5};
+    int legajo[TAMANIO]={111,222,333,444,555};
 
     cargarAlumnos(nombre,notasUno,notasDos,promedios,legajo,TAMANIO);
 
